@@ -18,6 +18,9 @@ IssueBuilderTest -> IssueBuilder :  setDescription("    description  ")
 activate IssueBuilder
 deactivate IssueBuilder
 
+IssueBuilderTest -> IssueBuilder : build()
+activate IssueBuilder
+
 create Issue
 IssueBuilder -> Issue : new(... , "    message  ", "    description  ", ...)
 Issue --> IssueBuilder : Issue

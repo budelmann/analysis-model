@@ -3,7 +3,7 @@
 title IssueFilterBuilder
 
 Report o-- Issue
-IssueFilterTest o-> Report : baut
+IssueFilterTest ..> Report : baut
 IssueFilterBuilder ..> Report : filtert
 
 @enduml

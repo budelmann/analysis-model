@@ -47,7 +47,7 @@ public class LineRangeBuilder {
 
     /***
      * Creates a new {@link LineRange} based on the specified properties.
-     * 
+     *
      * @return the created LineRange
      */
     public LineRange build() {
