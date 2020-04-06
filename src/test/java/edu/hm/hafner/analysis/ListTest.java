@@ -22,28 +22,28 @@ abstract class ListTest {
 
     @Test
     public void checkIfEmptyAndSize() {
-        assertThat(create(0).isEmpty()).isEqualTo(true);
-        assertThat(create(1).isEmpty()).isEqualTo(false);
-        assertThat(create(8).size()).isEqualTo(8);
+        assertThat(create(0).isEmpty());
+        assertThat(create(1)).isNotEmpty();
+        assertThat(create(8)).hasSize(8);
     }
 
     @Test
     public void CheckAddRemove() {
         final List<Integer> sut = create(0);
-        assertThat(sut.size()).isEqualTo(0);
+        assertThat(sut).hasSize(0);
         sut.add(12);
-        assertThat(sut.size()).isEqualTo(1);
+        assertThat(sut).hasSize(1);
         sut.remove(Integer.valueOf(12));
-        assertThat(sut.size()).isEqualTo(0);
+        assertThat(sut).hasSize(0);
     }
 
     @Test
     public void checkGetAndContains() {
         final List<Integer> sut = create(0);
         sut.add(11);
-        assertThat(sut.get(0)).isEqualTo(11);
-        assertThat(sut.contains(11)).isEqualTo(true);
+        assertThat(sut).isNotEmpty();
+        assertThat(sut).containsOnlyOnce(11);
         sut.remove(Integer.valueOf(11));
-        assertThat(sut.contains(11)).isEqualTo(false);
+        assertThat(sut).doesNotContain(11);
     }
 }
