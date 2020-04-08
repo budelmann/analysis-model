@@ -60,6 +60,7 @@ class ReportPrinterTest extends ResourceTest {
         return report;
     }
 
+    
     private ReaderFactory read(final String fileName) {
         return new FileReaderFactory(getResourceAsFile(fileName), StandardCharsets.UTF_8);
     }
